@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useCallback } from 'react';
 
 const API_BASE_URL = 'https://api.thecatapi.com/v1';
@@ -58,14 +59,14 @@ export const useApi = () => {
     return makeRequest<T>(url, { method: 'GET' });
   }, [makeRequest]);
 
-  const post = useCallback(<T>(url: string, data?: never): Promise<T> => {
+  const post = useCallback(<T, D = any>(url: string, data?: D): Promise<T> => {
     return makeRequest<T>(url, {
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
     });
   }, [makeRequest]);
 
-  const put = useCallback(<T>(url: string, data?: never): Promise<T> => {
+  const put = useCallback(<T, D = any>(url: string, data?: D): Promise<T> => {
     return makeRequest<T>(url, {
       method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
