@@ -73,9 +73,7 @@ export const CatCard = memo(({ cat, onVote, userVote, score }: CatCardProps) => 
                 isDisabled && !hasVoted ? 'opacity-50 cursor-not-allowed' : ''
               }`}
               leftIcon={<HandThumbUpIcon className="h-5 w-5" />}
-            >
-              {isVoting && !hasVoted ? 'Voting...' : 'Up'}
-            </Button>
+            />
             
             <Button
               onClick={() => handleVote(-1)}
@@ -87,9 +85,8 @@ export const CatCard = memo(({ cat, onVote, userVote, score }: CatCardProps) => 
                 isDisabled && !hasVoted ? 'opacity-50 cursor-not-allowed' : ''
               }`}
               leftIcon={<HandThumbDownIcon className="h-5 w-5" />}
-            >
-              {isVoting && !hasVoted ? 'Voting...' : 'Down'}
-            </Button>
+            />
+            
           </div>
           
           {hasVoted && (

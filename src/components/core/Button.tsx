@@ -6,7 +6,7 @@ import { cn } from '../../utils/cn';
 export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  children: ReactNode;
+  children?: ReactNode;
   loading?: boolean;
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
