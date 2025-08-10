@@ -46,6 +46,7 @@ npm run dev
 ```
 
 5. Open [http://localhost:5173](http://localhost:5173) in your browser
+6. Open [https://dainty-genie-67b2e9.netlify.app/](https://dainty-genie-67b2e9.netlify.app/) in your browser to preview the deployment
 
 ## 🏗️ Tech Stack
 
